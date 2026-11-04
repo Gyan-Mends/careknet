@@ -1,7 +1,7 @@
 import { Link } from "react-router";
 import { Track, useLoop } from "~/components/carousel";
 import { Icon } from "~/components/icons";
-import { Heart, Reveal, ScrollMotion } from "~/components/motion";
+import { Reveal, ScrollMotion } from "~/components/motion";
 import { ArrowButton, Btn, ClosingCta, Eyebrow } from "~/components/ui";
 import {
   contact,
@@ -38,16 +38,6 @@ function Hero() {
         <ScrollMotion moveIn="rotateIn" moveOut="moveHorizontal" x={-30} rotate={20} className="hero-photo">
           <Reveal anim="scale-custom" duration={1.8}>
             <img src={img.heroPhoto} alt="" />
-          </Reveal>
-        </ScrollMotion>
-        <ScrollMotion moveOut="rotateOut" rotate={30} className="heart heart--hero-top">
-          <Reveal anim="pulse-2" duration={1} ease="back">
-            <img src={img.heartTop} alt="" />
-          </Reveal>
-        </ScrollMotion>
-        <ScrollMotion moveOut="rotateIn" rotate={15} className="heart heart--hero-bottom">
-          <Reveal anim="pulse-2" duration={1} ease="back">
-            <img src={img.heartBottom} alt="" />
           </Reveal>
         </ScrollMotion>
       </div>
@@ -96,11 +86,6 @@ function Hero() {
 function Belief() {
   return (
     <section className="split-about">
-      <div className="heart heart--about-static" aria-hidden="true">
-        <Reveal anim="pulse-2">
-          <img src={img.heartSmall} alt="" />
-        </Reveal>
-      </div>
       <div className="wrap split-about-grid">
         <div className="split-about-copy">
           <Eyebrow>OUR BELIEF</Eyebrow>
@@ -192,7 +177,6 @@ function ProductCarousel() {
       <Reveal anim="fade-up" className="center-action">
         <Btn to="/products">Explore All Products and Services</Btn>
       </Reveal>
-      <Heart src={img.heartLarge} className="heart--products" direction="rotateIn" />
     </section>
   );
 }

@@ -19,8 +19,6 @@ export type RevealAnim =
   | "scale-up-1"
   | "scale-down"
   | "scale-custom"
-  | "pulse-1"
-  | "pulse-2"
   | "rotate-down-left"
   | "slide-bot"
   | "slide-right";
@@ -211,30 +209,5 @@ export function ScrollMotion({
     <div ref={ref} className={`scroll-motion ${className}`.trim()} style={style}>
       {children}
     </div>
-  );
-}
-
-/** Decorative 3D heart: scroll-linked rotation around a pulse entrance. */
-export function Heart({
-  src,
-  className,
-  direction = "rotateIn",
-  rotate = 30,
-  duration = 1.8,
-  ease = "out",
-}: {
-  src: string;
-  className: string;
-  direction?: "rotateIn" | "rotateOut";
-  rotate?: number;
-  duration?: number;
-  ease?: keyof typeof EASE;
-}) {
-  return (
-    <ScrollMotion moveOut={direction} rotate={rotate} className={`heart ${className}`}>
-      <Reveal anim="pulse-2" duration={duration} ease={ease}>
-        <img src={src} alt="" aria-hidden="true" draggable={false} />
-      </Reveal>
-    </ScrollMotion>
   );
 }

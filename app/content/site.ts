@@ -6,10 +6,6 @@ const T = "/images/template/";
 export const img = {
   blob: `${T}Path-1.svg`,
   heroPhoto: `${T}ML1A8632copy-79381-original-protected.png`,
-  heartTop: `${T}Mask-Group-42.png`,
-  heartBottom: `${T}Mask-Group-43.png`,
-  heartSmall: `${T}Mask-Group-4.png`,
-  heartLarge: `${T}Mask-Group-6.png`,
   cloud: `${T}Mask-Group-5.png`,
   aboutPhoto: `${T}A045_07290405_C055-71016-original-protected.jpg`,
   bandBg: `${T}A081_11281412_C046-65327-original-protected-scaled.jpg`,

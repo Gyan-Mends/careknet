@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { Link, NavLink, Outlet, useLocation } from "react-router";
 import { contact, footerBlurb, img, legal, nav, products } from "~/content/site";
 import { Icon } from "./icons";
-import { Heart, Reveal } from "./motion";
+import { Reveal } from "./motion";
 
 const LOGO = "/images/brand/careknect-logo.png";
 
@@ -57,7 +57,6 @@ function FooterTitle({ children }: { children: string }) {
 function Footer() {
   return (
     <footer className="site-footer">
-      <Heart src={img.heartLarge} className="heart--footer" direction="rotateIn" rotate={-30} />
       <div className="wrap">
         <div className="footer-panel">
           <div className="footer-grid">

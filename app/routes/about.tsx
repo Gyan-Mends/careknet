@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Icon } from "~/components/icons";
-import { Heart, Reveal } from "~/components/motion";
+import { Reveal } from "~/components/motion";
 import { Btn, ClosingCta, Eyebrow, PageHero } from "~/components/ui";
 import { img, pillars } from "~/content/site";
 
@@ -58,7 +58,6 @@ export default function About() {
       />
 
       <section className="inner-section purpose-section">
-        <Heart src={img.heartLarge} className="heart--purpose" direction="rotateOut" />
         <div className="wrap purpose-grid">
           <div className="purpose-media">
             <Reveal anim="scale-up" duration={1.8} className="purpose-photo">
@@ -122,7 +121,6 @@ export default function About() {
       </section>
 
       <section className="grey-section">
-        <Heart src={img.heartSmall} className="heart--grey" direction="rotateIn" />
         <div className="wrap accordion-grid">
           <Accordion />
           <div>

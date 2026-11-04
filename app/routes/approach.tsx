@@ -1,5 +1,5 @@
 import { Icon } from "~/components/icons";
-import { Heart, Reveal } from "~/components/motion";
+import { Reveal } from "~/components/motion";
 import { ClosingCta, Eyebrow, PageHero } from "~/components/ui";
 import { img, steps } from "~/content/site";
 
@@ -24,7 +24,6 @@ export default function Approach() {
       />
 
       <section className="inner-section purpose-section">
-        <Heart src={img.heartLarge} className="heart--purpose" direction="rotateOut" />
         <div className="wrap purpose-grid">
           <div className="purpose-media">
             <Reveal anim="scale-up" duration={1.8} className="purpose-photo">

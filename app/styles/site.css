@@ -72,8 +72,6 @@ body {
 @keyframes AuxScaleUp1 { from { transform: scale(0.7); } to { transform: none; opacity: 1; } }
 @keyframes AuxScaleDown { from { transform: scale(1.1); } to { transform: none; opacity: 1; } }
 @keyframes AuxScaleCustom { from { transform: scale(var(--r-s)); } to { transform: none; opacity: 1; } }
-@keyframes AuxPulseOut1 { from { transform: scale3d(1, 1, 1); } 50% { transform: scale3d(1.05, 1.05, 1.05); } to { opacity: 1; transform: none; } }
-@keyframes AuxPulseOut2 { from { transform: scale3d(1, 1, 1); } 50% { transform: scale3d(1.1, 1.1, 1.1); } to { opacity: 1; transform: none; } }
 @keyframes AuxRotateInDownLeft1 { from { transform-origin: left bottom; transform: rotate3d(0, 0, 1, -35deg); } to { transform-origin: left bottom; transform: none; opacity: 1; } }
 @keyframes AuxSlideFromBot { from { transform: translateY(100%); } to { opacity: 1; transform: none; } }
 @keyframes AuxSlideFromRight { from { transform: translateX(100%); } to { opacity: 1; transform: none; } }
@@ -99,8 +97,6 @@ html.js .reveal {
 .r-scale-up-1 { --r-name: AuxScaleUp1; }
 .r-scale-down { --r-name: AuxScaleDown; }
 .r-scale-custom { --r-name: AuxScaleCustom; }
-.r-pulse-1 { --r-name: AuxPulseOut1; }
-.r-pulse-2 { --r-name: AuxPulseOut2; }
 .r-rotate-down-left { --r-name: AuxRotateInDownLeft1; }
 
 /* Slide reveals: the wrapper masks while the child moves in. */
@@ -285,26 +281,6 @@ html.js .r-slide-right.is-in > * { animation: AuxSlideFromRight var(--r-d) var(-
   margin-top: 50px;
 }
 
-/* ---------- Decorative hearts ---------- */
-
-.heart {
-  position: absolute;
-  z-index: 3;
-  pointer-events: none;
-}
-.heart img { width: 100%; height: auto; display: block; filter: saturate(0.65) brightness(0.72); }
-
-.heart--hero-top { left: calc(538 * var(--u)); top: calc(105 * var(--u)); width: calc(290 * var(--u)); }
-.heart--hero-bottom { left: calc(-101 * var(--u)); top: calc(573 * var(--u)); width: calc(468 * var(--u)); }
-.heart--about-static { left: calc(1 * var(--u)); bottom: calc(10 * var(--u)); width: calc(177 * var(--u)); }
-.heart--products { right: calc(-117 * var(--u)); bottom: calc(-212 * var(--u)); width: calc(439 * var(--u)); z-index: 3; }
-.heart--cta-left { left: calc(1 * var(--u)); top: calc(-187 * var(--u)); width: calc(177 * var(--u)); }
-.heart--cta-right { right: calc(-31 * var(--u)); bottom: calc(-217 * var(--u)); width: calc(200 * var(--u)); }
-.heart--footer { right: calc(-69 * var(--u)); top: calc(-5 * var(--u)); width: calc(439 * var(--u)); z-index: 4; }
-.heart--purpose { right: calc(-40 * var(--u)); bottom: calc(-40 * var(--u)); width: calc(240 * var(--u)); }
-.heart--grey { left: 0; top: calc(-60 * var(--u)); width: calc(150 * var(--u)); }
-.heart--contact { left: calc(60 * var(--u)); bottom: calc(-140 * var(--u)); width: calc(130 * var(--u)); }
-
 /* ---------- Header ---------- */
 
 .site-header {
@@ -444,8 +420,7 @@ html.js .r-slide-right.is-in > * { animation: AuxSlideFromRight var(--r-d) var(-
 
 .split-about {
   position: relative;
-  min-height: calc(967 * var(--u));
-  padding: calc(230 * var(--u)) 0 calc(180 * var(--u));
+  padding: calc(150 * var(--u)) 0 calc(90 * var(--u));
 }
 
 .split-about-grid {
@@ -577,7 +552,7 @@ html.js .r-slide-right.is-in > * { animation: AuxSlideFromRight var(--r-d) var(-
 .products-section {
   position: relative;
   z-index: 2;
-  padding: 66px 0 calc(224 * var(--u));
+  padding: 66px 0 calc(120 * var(--u));
 }
 
 .products-carousel {
@@ -865,7 +840,7 @@ html.js .r-slide-right.is-in > * { animation: AuxSlideFromRight var(--r-d) var(-
   gap: 50px;
   max-width: 1440px;
   margin: 0 auto;
-  padding: 100px 35px calc(240 * var(--u));
+  padding: 100px 35px calc(120 * var(--u));
 }
 
 .steps-track-wrap { min-width: 0; }
@@ -958,7 +933,7 @@ html.js .r-slide-right.is-in > * { animation: AuxSlideFromRight var(--r-d) var(-
 
 .site-footer {
   position: relative;
-  padding-top: calc(256 * var(--u));
+  padding-top: calc(130 * var(--u));
 }
 
 .footer-panel {
@@ -1366,22 +1341,10 @@ html.js .r-slide-right.is-in > * { animation: AuxSlideFromRight var(--r-d) var(-
   .shape--mid { left: calc(25 * var(--u)); top: calc(300 * var(--u)); width: calc(195 * var(--u)); height: calc(195 * var(--u)); }
   .shape--sky { left: calc(180 * var(--u)); top: calc(110 * var(--u)); width: calc(150 * var(--u)); height: calc(150 * var(--u)); }
   .hero-photo { left: calc(75 * var(--u)); top: calc(190 * var(--u)); width: calc(280 * var(--u)); }
-  .heart--hero-top { left: calc(255 * var(--u)); top: calc(145 * var(--u)); width: calc(140 * var(--u)); }
-  .heart--hero-bottom { left: calc(5 * var(--u)); top: calc(385 * var(--u)); width: calc(170 * var(--u)); }
   .hero-panel { position: relative; left: auto; top: auto; width: auto; height: auto; margin: 0 24px; padding: 32px 24px; }
   .hero-follow { position: static; margin: 30px 24px 0; }
   .hero-follow-row { justify-content: flex-start; flex-wrap: wrap; gap: 18px; }
   .hero-follow-line { width: 60px; }
-
-  /* Hearts sit out of the way of stacked content */
-  .heart--about-static,
-  .heart--cta-left,
-  .heart--grey,
-  .heart--contact,
-  .heart--purpose { display: none; }
-  .heart--products { width: 130px; right: -30px; bottom: -40px; }
-  .heart--cta-right { width: 100px; right: -14px; bottom: -80px; }
-  .heart--footer { width: 150px; right: -20px; top: 10px; }
 
   /* Stacked two-column layouts */
   .split-about { min-height: 0; padding: 70px 0; }
@@ -1439,7 +1402,7 @@ html.js .r-slide-right.is-in > * { animation: AuxSlideFromRight var(--r-d) var(-
 
   .services-section { padding: 90px 0 40px; }
 
-  .site-footer { padding-top: 110px; }
+  .site-footer { padding-top: 70px; }
   .footer-panel { padding: 18px; }
   .footer-grid { grid-template-columns: minmax(0, 1fr); padding: 26px 20px; }
   .footer-col ul { margin-top: 22px; }
@@ -1475,8 +1438,5 @@ html.js .r-slide-right.is-in > * { animation: AuxSlideFromRight var(--r-d) var(-
   .btn { padding-inline: 22px; font-size: 14px; }
 }
 
-/* When the call to action closes a page, it needs space above and its heart
-   would collide with the footer's. */
+/* When the call to action closes a page, it needs space above. */
 .cta-section:last-child { padding-top: 110px; }
-.cta-section:last-child .heart--cta-right,
-.cta-section:last-child .heart--cta-left { display: none; }

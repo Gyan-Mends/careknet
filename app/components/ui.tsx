@@ -2,7 +2,7 @@ import type { ReactNode } from "react";
 import { Link } from "react-router";
 import { img } from "~/content/site";
 import { Icon } from "./icons";
-import { Heart, Reveal } from "./motion";
+import { Reveal } from "./motion";
 
 /** Small label with the template's hollow ring, sliding up from behind a mask. */
 export function Eyebrow({
@@ -77,7 +77,6 @@ export function ClosingCta({
 }) {
   return (
     <section className="cta-section">
-      <Heart src={img.heartSmall} className="heart--cta-left" direction="rotateIn" />
       <div className="wrap">
         <div className="cta-panel">
           <div className="cta-copy">
@@ -99,12 +98,6 @@ export function ClosingCta({
           </Reveal>
         </div>
       </div>
-      <Heart
-        src={img.heartLarge}
-        className="heart--cta-right"
-        direction="rotateOut"
-        ease="inOut"
-      />
     </section>
   );
 }
