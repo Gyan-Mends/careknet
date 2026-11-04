@@ -16,7 +16,6 @@ export const img = {
   roomPhoto: `${T}DSC_9987-582066-original-protected.jpg`,
   nursePhoto: `${T}MG_1758-1-69936-original-protected.jpg`,
   doctorCutout: `${T}Mask-Group-9.png`,
-  ctaBg: `${T}Mask-Group-10.png`,
   clipboard: `${T}close-up-of-doctors-with-clipboard-at-hospital-PNAWFWS.jpg`,
   bedside: `${T}MG_1818-1-23222-original-protected.jpg`,
   library: `${T}RK_Library_Medical_2020_0287-38298-original-protected-1-scaled-637x427.jpg`,

@@ -7,10 +7,10 @@ import { Heart, Reveal } from "./motion";
 /** Small label with the template's hollow ring, sliding up from behind a mask. */
 export function Eyebrow({
   children,
-  tone = "blue",
+  tone = "navy",
 }: {
   children: ReactNode;
-  tone?: "blue" | "yellow";
+  tone?: "navy" | "light";
 }) {
   return (
     <Reveal anim="slide-bot" duration={1} className={`eyebrow eyebrow--${tone}`}>
@@ -25,11 +25,11 @@ export function Eyebrow({
 export function Btn({
   to,
   children,
-  variant = "yellow",
+  variant = "primary",
 }: {
   to: string;
   children: ReactNode;
-  variant?: "yellow" | "blue" | "ghost";
+  variant?: "primary" | "ghost";
 }) {
   return (
     <Link to={to} className={`btn btn--${variant}`}>
@@ -52,7 +52,7 @@ export function PageHero({
     <section className="page-hero" style={{ backgroundImage: `url("${image}")` }}>
       <div className="page-hero-tint" />
       <div className="wrap page-hero-copy">
-        <Eyebrow tone="yellow">{eyebrow}</Eyebrow>
+        <Eyebrow tone="light">{eyebrow}</Eyebrow>
         <Reveal as="h1" anim="fade-up-1">
           {title}
         </Reveal>
@@ -79,9 +79,9 @@ export function ClosingCta({
     <section className="cta-section">
       <Heart src={img.heartSmall} className="heart--cta-left" direction="rotateIn" />
       <div className="wrap">
-        <div className="cta-panel" style={{ backgroundImage: `url("${img.ctaBg}")` }}>
+        <div className="cta-panel">
           <div className="cta-copy">
-            <Eyebrow tone="yellow">{eyebrow}</Eyebrow>
+            <Eyebrow tone="light">{eyebrow}</Eyebrow>
             <Reveal as="h2" anim="fade-up-1">
               {title}
             </Reveal>

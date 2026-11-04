@@ -29,10 +29,10 @@ function Hero() {
   return (
     <section className="hero">
       <div className="hero-art" aria-hidden="true">
-        <ScrollMotion moveIn="moveHorizontal" moveOut="scale" x={70} scale={0.7} className="shape shape--yellow">
+        <ScrollMotion moveIn="moveHorizontal" moveOut="scale" x={70} scale={0.7} className="shape shape--mid">
           <Reveal anim="fade-custom" fromX={-60} duration={1.7} className="shape-fill" />
         </ScrollMotion>
-        <ScrollMotion moveOut="scale" scale={0.8} className="shape shape--cyan">
+        <ScrollMotion moveOut="scale" scale={0.8} className="shape shape--sky">
           <Reveal anim="fade-custom" fromY={60} duration={1.8} className="shape-fill" />
         </ScrollMotion>
         <ScrollMotion moveIn="rotateIn" moveOut="moveHorizontal" x={-30} rotate={20} className="hero-photo">
@@ -53,7 +53,7 @@ function Hero() {
       </div>
 
       <div className="hero-panel">
-        <Eyebrow tone="yellow">CAREKNECT LIMITED</Eyebrow>
+        <Eyebrow tone="light">CAREKNECT LIMITED</Eyebrow>
         <Reveal as="h1" anim="fade-up-1">
           Care. Better connected.
         </Reveal>
@@ -252,7 +252,7 @@ function Pathways() {
               <h3>{p.title}</h3>
               <p>{p.text}</p>
               <Reveal anim="scale-up-1" duration={1.2}>
-                <Btn to={p.to} variant={p.featured ? "blue" : "yellow"}>
+                <Btn to={p.to}>
                   {p.label}
                 </Btn>
               </Reveal>
@@ -343,7 +343,7 @@ function WhyWeExist() {
       </Reveal>
       <div className="blue-head">
         <div>
-          <Eyebrow tone="yellow">WHY WE EXIST</Eyebrow>
+          <Eyebrow tone="light">WHY WE EXIST</Eyebrow>
           <Reveal as="h2" anim="fade-up-1" duration={1.3} className="h2 h2--white">
             To make digital health work for real healthcare needs.
           </Reveal>

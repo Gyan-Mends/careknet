@@ -264,7 +264,7 @@ function EnquiryForm() {
         ) : null}
       </div>
 
-      <button type="submit" className="btn btn--yellow form-submit" disabled={submitting}>
+      <button type="submit" className="btn btn--primary form-submit" disabled={submitting}>
         {submitting ? "Sending…" : "Send Enquiry"}
       </button>
     </Form>

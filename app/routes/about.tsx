@@ -97,7 +97,7 @@ export default function About() {
               healthcare.
             </Reveal>
             <Reveal anim="fade-up-1">
-              <Btn to="/contact" variant="blue">
+              <Btn to="/contact">
                 Connect With Us
               </Btn>
             </Reveal>

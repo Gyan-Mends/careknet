@@ -29,7 +29,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="theme-color" content="#0142ff" />
+        <meta name="theme-color" content="#0a2e63" />
         {/* Lets the CSS hide content awaiting its entrance animation only when JavaScript runs. */}
         <script dangerouslySetInnerHTML={{ __html: "document.documentElement.classList.add('js')" }} />
         <Meta />

@@ -37,7 +37,7 @@ function Header() {
             {item.label}
           </NavLink>
         ))}
-        <Link to="/contact" className="btn btn--yellow nav-cta">
+        <Link to="/contact" className="btn btn--primary nav-cta">
           Connect With Us ↗
         </Link>
       </nav>

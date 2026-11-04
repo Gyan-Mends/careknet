@@ -100,7 +100,7 @@ export default function Products() {
         </Reveal>
         <div className="blue-head">
           <div>
-            <Eyebrow tone="yellow">PROFESSIONAL SERVICES</Eyebrow>
+            <Eyebrow tone="light">PROFESSIONAL SERVICES</Eyebrow>
             <Reveal as="h2" anim="fade-up-1" duration={1.3} className="h2 h2--white">
               Better processes. More effective digital health.
             </Reveal>
