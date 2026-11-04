@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { Link, NavLink, Outlet, useLocation } from "react-router";
 import { contact, footerBlurb, img, legal, nav, products } from "~/content/site";
 import { Icon } from "./icons";
-import { Reveal } from "./motion";
+import { Reveal, Watermark } from "./motion";
 
 const LOGO = "/images/brand/careknect-logo.png";
 
@@ -59,6 +59,7 @@ function Footer() {
     <footer className="site-footer">
       <div className="wrap">
         <div className="footer-panel">
+          <Watermark className="watermark--footer" />
           <div className="footer-grid">
             <Reveal anim="fade-up" duration={1} className="footer-brand">
               <Link to="/" className="footer-logo" aria-label="Careknect Limited, home">

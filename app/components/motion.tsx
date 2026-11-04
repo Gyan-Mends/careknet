@@ -211,3 +211,12 @@ export function ScrollMotion({
     </div>
   );
 }
+
+/** Faint Careknect symbol behind a section, turning slightly as the page scrolls. */
+export function Watermark({ className }: { className: string }) {
+  return (
+    <ScrollMotion moveOut="rotateIn" rotate={15} className={`watermark ${className}`}>
+      <span className="watermark-shape" />
+    </ScrollMotion>
+  );
+}

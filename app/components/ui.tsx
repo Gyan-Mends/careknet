@@ -2,7 +2,7 @@ import type { ReactNode } from "react";
 import { Link } from "react-router";
 import { img } from "~/content/site";
 import { Icon } from "./icons";
-import { Reveal } from "./motion";
+import { Reveal, Watermark } from "./motion";
 
 /** Small label with the template's hollow ring, sliding up from behind a mask. */
 export function Eyebrow({
@@ -51,6 +51,7 @@ export function PageHero({
   return (
     <section className="page-hero" style={{ backgroundImage: `url("${image}")` }}>
       <div className="page-hero-tint" />
+      <Watermark className="watermark--page-hero" />
       <div className="wrap page-hero-copy">
         <Eyebrow tone="light">{eyebrow}</Eyebrow>
         <Reveal as="h1" anim="fade-up-1">
@@ -79,6 +80,7 @@ export function ClosingCta({
     <section className="cta-section">
       <div className="wrap">
         <div className="cta-panel">
+          <Watermark className="watermark--cta" />
           <div className="cta-copy">
             <Eyebrow tone="light">{eyebrow}</Eyebrow>
             <Reveal as="h2" anim="fade-up-1">

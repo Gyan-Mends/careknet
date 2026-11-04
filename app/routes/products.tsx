@@ -1,5 +1,5 @@
 import { Icon } from "~/components/icons";
-import { Reveal, ScrollMotion } from "~/components/motion";
+import { Reveal, ScrollMotion, Watermark } from "~/components/motion";
 import { Btn, ClosingCta, Eyebrow, PageHero } from "~/components/ui";
 import { img, products, services } from "~/content/site";
 
@@ -95,6 +95,7 @@ export default function Products() {
       </section>
 
       <section id="services" className="blue-section blue-section--services">
+        <Watermark className="watermark--blue" />
         <Reveal anim="rotate-down-left" duration={2.3} className="blue-cloud blue-cloud--a">
           <img src={img.cloud} alt="" aria-hidden="true" />
         </Reveal>

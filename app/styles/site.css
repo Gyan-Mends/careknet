@@ -13,6 +13,7 @@
   --ease-out: cubic-bezier(0.165, 0.84, 0.44, 1);
   /* One design pixel: scales down with the window below 1440px. */
   --u: min(1px, calc(100vw / 1440));
+  --symbol-ratio: 778 / 799;
   /* Keeps the hero artwork centred on screens wider than the 1440px design. */
   --hero-x: max(0px, calc((100vw - 1440px) / 2));
 }
@@ -580,19 +581,19 @@ html.js .r-slide-right.is-in > * { animation: AuxSlideFromRight var(--r-d) var(-
 }
 
 .track--three .track-item { display: flex; }
-.track--three .product-card { width: 100%; overflow: visible; }
+.track--three .product-card { display: flex; flex-direction: column; width: 100%; overflow: visible; }
 
-.product-card-media { height: 239px; overflow: hidden; border-radius: 15px 15px 0 0; }
+.product-card-media { height: 170px; overflow: hidden; border-radius: 15px 15px 0 0; }
 .product-card-media img { width: 100%; height: 100%; object-fit: cover; pointer-events: none; }
 
 .product-card-icon {
   position: absolute;
-  top: 196px;
-  right: 30px;
+  top: 134px;
+  right: 24px;
   display: grid;
   place-items: center;
-  width: 88px;
-  height: 88px;
+  width: 72px;
+  height: 72px;
   border-radius: 12px;
   background: var(--navy);
   color: #fff;
@@ -600,9 +601,10 @@ html.js .r-slide-right.is-in > * { animation: AuxSlideFromRight var(--r-d) var(-
 }
 .product-card-icon.is-left { right: auto; left: 0; }
 
-.product-card-body { padding: 56px 20px 28px; }
-.product-card-body h3 { font-size: 24px; font-weight: 500; line-height: 1.4; }
-.product-card-body > p:not(.card-kicker) { margin-top: 8px; font-size: 15px; line-height: 26px; color: var(--muted); }
+.product-card-body { flex: 1; display: flex; flex-direction: column; align-items: flex-start; padding: 44px 20px 22px; }
+.product-card-body h3 { font-size: 20px; font-weight: 500; line-height: 1.4; }
+.product-card-body > p:not(.card-kicker) { margin-top: 6px; font-size: 14px; line-height: 22px; color: var(--muted); }
+.product-card-body .text-link { margin-top: auto; padding-top: 12px; }
 
 /* ---------- Blue band with three cards ---------- */
 
@@ -1296,6 +1298,7 @@ html.js .r-slide-right.is-in > * { animation: AuxSlideFromRight var(--r-d) var(-
 /* ---------- Tablet and phone ---------- */
 
 @media (max-width: 1240px) {
+  .track--three { --item: calc((100% - 50px) / 2); --step: calc((100% + 50px) / 2); }
   .nav-link { padding-inline: 12px; font-size: 15px; }
   .nav-cta { margin-left: 10px; padding-inline: 18px; font-size: 13px; }
   .service-grid,
@@ -1440,3 +1443,66 @@ html.js .r-slide-right.is-in > * { animation: AuxSlideFromRight var(--r-d) var(-
 
 /* When the call to action closes a page, it needs space above. */
 .cta-section:last-child { padding-top: 110px; }
+
+/* ---------- Careknect symbol watermark ---------- */
+
+.hero,
+.split-about,
+.blue-section,
+.page-hero,
+.cta-panel,
+.footer-panel,
+.grey-section,
+.contact-section {
+  position: relative;
+  isolation: isolate;
+}
+
+.watermark {
+  position: absolute;
+  z-index: -1;
+  aspect-ratio: var(--symbol-ratio);
+  color: var(--navy);
+  opacity: 0.05;
+  pointer-events: none;
+}
+
+.watermark-shape {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: currentColor;
+  mask: url("/images/brand/careknect-symbol.png") center / contain no-repeat;
+}
+
+/* On navy the symbol is white. */
+.watermark--hero,
+.watermark--blue,
+.watermark--page-hero,
+.watermark--cta,
+.watermark--footer {
+  color: #fff;
+  opacity: 0.07;
+}
+
+.watermark--hero { right: calc(20 * var(--u)); top: calc(120 * var(--u)); width: calc(640 * var(--u)); }
+.watermark--belief { left: calc(40 * var(--u)); bottom: calc(10 * var(--u)); width: calc(360 * var(--u)); }
+.watermark--blue { right: calc(-60 * var(--u)); top: calc(30 * var(--u)); width: calc(560 * var(--u)); }
+.watermark--cta { left: 42%; bottom: 24px; width: calc(320 * var(--u)); }
+.watermark--footer { right: calc(30 * var(--u)); bottom: calc(-30 * var(--u)); width: calc(400 * var(--u)); }
+.watermark--grey { right: calc(40 * var(--u)); top: calc(50 * var(--u)); width: calc(460 * var(--u)); }
+.watermark--contact { right: calc(150 * var(--u)); bottom: calc(40 * var(--u)); width: calc(440 * var(--u)); }
+
+/* The page hero's photo tint sits above negative layers, so this one sits on top of it. */
+.watermark--page-hero { z-index: 0; right: calc(70 * var(--u)); bottom: calc(30 * var(--u)); width: calc(330 * var(--u)); opacity: 0.1; }
+
+@media (max-width: 1024px) {
+  .watermark--hero { right: -40px; top: auto; bottom: 60px; width: 300px; }
+  .watermark--belief { left: auto; right: -40px; bottom: auto; top: 30px; width: 240px; }
+  .watermark--blue { right: -60px; top: 20px; width: 280px; }
+  .watermark--cta { left: auto; right: -30px; bottom: auto; top: 20px; width: 200px; }
+  .watermark--footer { right: -40px; bottom: -20px; width: 240px; }
+  .watermark--grey { right: -40px; top: 20px; width: 240px; }
+  .watermark--contact { right: -40px; bottom: 20px; width: 240px; }
+  .watermark--page-hero { right: -30px; bottom: -20px; width: 220px; }
+}

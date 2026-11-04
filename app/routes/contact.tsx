@@ -2,7 +2,7 @@ import { useEffect, useRef } from "react";
 import { Form, useActionData, useNavigation, useSearchParams } from "react-router";
 import type { Route } from "./+types/contact";
 import { Icon } from "~/components/icons";
-import { Reveal } from "~/components/motion";
+import { Reveal, Watermark } from "~/components/motion";
 import { Eyebrow, PageHero } from "~/components/ui";
 import { contact, enquiryTypes, img, privacyHref } from "~/content/site";
 
@@ -281,6 +281,7 @@ export default function Contact() {
       />
 
       <section className="inner-section contact-section">
+        <Watermark className="watermark--contact" />
         <div className="wrap contact-grid">
           <div>
             <Eyebrow>ENQUIRY FORM</Eyebrow>

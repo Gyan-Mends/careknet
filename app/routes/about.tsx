@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Icon } from "~/components/icons";
-import { Reveal } from "~/components/motion";
+import { Reveal, Watermark } from "~/components/motion";
 import { Btn, ClosingCta, Eyebrow, PageHero } from "~/components/ui";
 import { img, pillars } from "~/content/site";
 
@@ -121,6 +121,7 @@ export default function About() {
       </section>
 
       <section className="grey-section">
+        <Watermark className="watermark--grey" />
         <div className="wrap accordion-grid">
           <Accordion />
           <div>

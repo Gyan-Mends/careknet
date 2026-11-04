@@ -1,7 +1,7 @@
 import { Link } from "react-router";
 import { Track, useLoop } from "~/components/carousel";
 import { Icon } from "~/components/icons";
-import { Reveal, ScrollMotion } from "~/components/motion";
+import { Reveal, ScrollMotion, Watermark } from "~/components/motion";
 import { ArrowButton, Btn, ClosingCta, Eyebrow } from "~/components/ui";
 import {
   contact,
@@ -28,6 +28,7 @@ export function meta() {
 function Hero() {
   return (
     <section className="hero">
+      <Watermark className="watermark--hero" />
       <div className="hero-art" aria-hidden="true">
         <ScrollMotion moveIn="moveHorizontal" moveOut="scale" x={70} scale={0.7} className="shape shape--mid">
           <Reveal anim="fade-custom" fromX={-60} duration={1.7} className="shape-fill" />
@@ -86,6 +87,7 @@ function Hero() {
 function Belief() {
   return (
     <section className="split-about">
+      <Watermark className="watermark--belief" />
       <div className="wrap split-about-grid">
         <div className="split-about-copy">
           <Eyebrow>OUR BELIEF</Eyebrow>
@@ -322,6 +324,7 @@ function WhyWeExist() {
 
   return (
     <section className="blue-section">
+      <Watermark className="watermark--blue" />
       <Reveal anim="rotate-down-left" duration={2.3} className="blue-cloud blue-cloud--a">
         <img src={img.cloud} alt="" aria-hidden="true" />
       </Reveal>
