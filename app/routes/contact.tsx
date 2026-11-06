@@ -5,6 +5,7 @@ import { Icon } from "~/components/icons";
 import { Reveal, Watermark } from "~/components/motion";
 import { Eyebrow, PageHero } from "~/components/ui";
 import { contact, enquiryTypes, img, privacyHref } from "~/content/site";
+import { seo } from "~/seo";
 
 const REQUIRED = "This field is required.";
 
@@ -13,14 +14,12 @@ type Errors = Partial<
 >;
 
 export function meta() {
-  return [
-    { title: "Contact Careknect — Let's discuss what you need" },
-    {
-      name: "description",
-      content:
-        "Contact Careknect about product demonstrations, professional services, partnerships or general enquiries.",
-    },
-  ];
+  return seo({
+    title: "Contact Careknect — Let's discuss what you need",
+    description:
+      "Contact Careknect about product demonstrations, professional services, partnerships or general enquiries.",
+    path: "/contact",
+  });
 }
 
 function validate(data: Record<string, string>): Errors {

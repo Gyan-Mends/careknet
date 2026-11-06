@@ -3,16 +3,15 @@ import { Icon } from "~/components/icons";
 import { Reveal, Watermark } from "~/components/motion";
 import { Btn, ClosingCta, Eyebrow, PageHero } from "~/components/ui";
 import { img, pillars } from "~/content/site";
+import { seo } from "~/seo";
 
 export function meta() {
-  return [
-    { title: "About Careknect — Practical technology for better healthcare" },
-    {
-      name: "description",
-      content:
-        "Careknect Limited is a Ghanaian digital health company developing focused solutions for healthcare access, care coordination and facility management.",
-    },
-  ];
+  return seo({
+    title: "About Careknect — Practical technology for better healthcare",
+    description:
+      "Careknect Limited is a Ghanaian digital health company developing focused solutions for healthcare access, care coordination and facility management.",
+    path: "/about",
+  });
 }
 
 function Accordion() {

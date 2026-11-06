@@ -2,16 +2,15 @@ import { Icon } from "~/components/icons";
 import { Reveal } from "~/components/motion";
 import { ClosingCta, Eyebrow, PageHero } from "~/components/ui";
 import { img, steps } from "~/content/site";
+import { seo } from "~/seo";
 
 export function meta() {
-  return [
-    { title: "Our Approach — Careknect Limited" },
-    {
-      name: "description",
-      content:
-        "We begin by understanding the healthcare challenge, the people affected by it and the environment in which it occurs.",
-    },
-  ];
+  return seo({
+    title: "Our Approach — Careknect Limited",
+    description:
+      "We begin by understanding the healthcare challenge, the people affected by it and the environment in which it occurs.",
+    path: "/our-approach",
+  });
 }
 
 export default function Approach() {

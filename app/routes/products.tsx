@@ -2,16 +2,15 @@ import { Icon } from "~/components/icons";
 import { Reveal, ScrollMotion, Watermark } from "~/components/motion";
 import { Btn, ClosingCta, Eyebrow, PageHero } from "~/components/ui";
 import { img, products, services } from "~/content/site";
+import { seo } from "~/seo";
 
 export function meta() {
-  return [
-    { title: "Products & Services — Careknect Limited" },
-    {
-      name: "description",
-      content:
-        "Focused digital health products and professional services for healthcare providers, care teams, organisations and the people they serve.",
-    },
-  ];
+  return seo({
+    title: "Products & Services — Careknect Limited",
+    description:
+      "Focused digital health products and professional services for healthcare providers, care teams, organisations and the people they serve.",
+    path: "/products",
+  });
 }
 
 export default function Products() {

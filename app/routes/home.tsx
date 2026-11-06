@@ -13,16 +13,15 @@ import {
   values,
   type IconName,
 } from "~/content/site";
+import { seo } from "~/seo";
 
 export function meta() {
-  return [
-    { title: "Careknect Limited — Care. Better connected." },
-    {
-      name: "description",
-      content:
-        "Careknect is a digital health company developing practical solutions for healthcare access, care coordination and facility management.",
-    },
-  ];
+  return seo({
+    title: "Careknect Limited — Care. Better connected.",
+    description:
+      "Careknect is a digital health company developing practical solutions for healthcare access, care coordination and facility management.",
+    path: "/",
+  });
 }
 
 function Hero() {
@@ -107,7 +106,7 @@ function Belief() {
             anim="scale-up"
             duration={1.8}
             className="about-photo"
-            style={{ backgroundImage: `url("${img.aboutPhoto}")` }}
+            style={{ backgroundImage: `url("${img.beliefPhoto}")` }}
           />
           <ScrollMotion moveIn="moveHorizontal" moveOut="moveHorizontal" x={20} className="quote-card-pos">
             <Reveal anim="fade-custom" fromX={40} duration={1.7} className="quote-card">
@@ -135,8 +134,7 @@ function Belief() {
   );
 }
 
-function ProductCarousel() {
-  const loop = useLoop(products.length);
+function Products() {
   const items = products.map((p, i) => (
     <article className="product-card" key={p.id}>
       <div className="product-card-media">
@@ -171,10 +169,8 @@ function ProductCarousel() {
           intended users.
         </Reveal>
       </div>
-      <Reveal anim="fade-up" duration={1.7} className="products-carousel">
-        <ArrowButton dir="left" onClick={loop.prev} label="Previous product" />
-        <Track loop={loop} items={items} label="Careknect products" className="track--three" />
-        <ArrowButton dir="right" onClick={loop.next} label="Next product" />
+      <Reveal anim="fade-up" duration={1.7} className="products-grid">
+        {items}
       </Reveal>
       <Reveal anim="fade-up" className="center-action">
         <Btn to="/products">Explore All Products and Services</Btn>
@@ -440,7 +436,7 @@ export default function Home() {
     <>
       <Hero />
       <Belief />
-      <ProductCarousel />
+      <Products />
       <Pathways />
       <Identity />
       <WhyWeExist />

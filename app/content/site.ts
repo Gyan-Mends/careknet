@@ -5,9 +5,13 @@ const T = "/images/template/";
 
 export const img = {
   blob: `${T}Path-1.svg`,
-  heroPhoto: `${T}ML1A8632copy-79381-original-protected.png`,
+  heroPhoto: "/hero.png",
   cloud: `${T}Mask-Group-5.png`,
   aboutPhoto: `${T}A045_07290405_C055-71016-original-protected.jpg`,
+  beliefPhoto: `/${encodeURIComponent("Mother and Child’s Clinic Moment.png")}`,
+  productClinic: `/${encodeURIComponent("clinic mng.png")}`,
+  productCoordinate: `/${encodeURIComponent("Careknect Care Coordinator Dashboard.png")}`,
+  productNavigate: `/${encodeURIComponent("Care Navigator_ Find Care Nearby.png")}`,
   bandBg: `${T}A081_11281412_C046-65327-original-protected-scaled.jpg`,
   roomPhoto: `${T}DSC_9987-582066-original-protected.jpg`,
   nursePhoto: `${T}MG_1758-1-69936-original-protected.jpg`,
@@ -115,7 +119,7 @@ export const products: Product[] = [
     name: "Careknect Clinic",
     title: "Clinic Management Software",
     icon: "clinic",
-    image: img.clipboard,
+    image: img.productClinic,
     secondImage: img.roomPhoto,
     summary:
       "A digital management platform that helps clinics streamline administrative and patient-management processes, improve operational visibility and support more efficient service delivery.",
@@ -135,7 +139,7 @@ export const products: Product[] = [
     title: "Care Coordinator App",
     tag: "Flagship Product",
     icon: "coordinate",
-    image: img.bedside,
+    image: img.productCoordinate,
     secondImage: img.nursePhoto,
     summary:
       "A digital case-management and referral platform that helps care teams coordinate services, assign responsibilities and track each client’s progress over time.",
@@ -154,7 +158,7 @@ export const products: Product[] = [
     name: "Careknect Navigate",
     title: "Care Navigation",
     icon: "navigate",
-    image: img.library,
+    image: img.productNavigate,
     secondImage: img.blog1,
     summary:
       "An AI-assisted care navigation platform that helps people find appropriate healthcare facilities and services based on their needs, location and preferences.",
